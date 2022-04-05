@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Poppins;
+}
+
+#class-notes {
+    padding: 70px 0;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.disapproved {
+    color: rgb(245, 23, 23);
+}
+
+.approved {
+    color: rgb(0, 173, 0);
+}
+
+ 
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 50%;
+    min-width: 320px;
+    max-width: 500px;
+    font-weight: 500;
+}
+
+table tr:first-child {
+    font-weight: 500;
+}
+
+table tr {
+    border-bottom: 1px solid black;
+    margin: none;
+}
+
+table tr td {
+    padding: 10px;
+    text-align: center;
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin: none;
+}
+
+.insert-student {
+    width: 50%;
+    min-width: 320px;
+    max-width: 500px;
+    margin-top: 50px;
+}
+
+.insert-student input.name {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.insert-student .notes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.insert-student .notes input.student-notes {
+    width: 32%;
+}
+
+.insert-student button {
+    height: 38px;
+    width: 100%;
+    min-width: 320px;
+    max-width: 500px;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: 0.8s;
+    background-color: #3E00C4;
+}
+
+.insert-student button:hover {
+    background-color: #3600AB;
+    cursor: pointer;
+}

@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/main.css">
+        <title>Tabela de Notas</title>
+    </head>
+    <body id="class-notes">
+        <table id="students-notes">
+            <tr>
+                <td>Aluno</td>
+                <td>Nota 1</td>
+                <td>Nota 2</td>
+                <td>Nota 3</td>
+                <td>Média</td>
+            </tr>
+            <tr>
+                <td>Bianca</td>
+                <td>10</td>
+                <td>10</td>
+                <td>10</td>
+                <td>Média</td>
+            </tr>
+            <tr>
+                <td>Yan 1</td>
+                <td>1</td>
+                <td>2</td>
+                <td>2</td>
+                <td>Média</td>
+            </tr>
+            <tr>
+                <td>Yan 2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>3</td>
+                <td>Média</td>
+            </tr>
+            <tr>
+                <td>Beatriz</td>
+                <td>0</td>
+                <td>2</td>
+                <td>2</td>
+                <td>Média</td>
+            </tr>
+            <tr>
+                <td>Kevin 1</td>
+                <td>0</td>
+                <td>5</td>
+                <td>4</td>
+                <td>Média</td>
+            </tr>
+            <tr>
+                <td>Kevin 2</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>Média</td>
+            </tr>
+        </table>
+
+        <form class="insert-student">
+            <input type="text" placeholder="Nome" class="name" required>
+            <div class="notes">
+                <input data-type="insertStudent" placeholder="Nota 1" type="number" class="student-notes" min="0" max="10" required>
+                <input data-type="insertStudent" placeholder="Nota 2" type="number" class="student-notes" min="0" max="10" required>
+                <input data-type="insertStudent" placeholder="Nota 3" type="number" class="student-notes" min="0" max="10" required>
+            </div>
+            <button id="button-insert-student" data-type="insertStudent" type="submit">Inserir Aluno</button>
+        </form>
+        
+    </body>
+    <script type="module" src="./js/main.js"></script>
+</html>
