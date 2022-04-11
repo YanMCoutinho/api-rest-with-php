@@ -1,12 +1,9 @@
-export function insertStudent() {
-    let name = document.querySelector('#class-notes input.name').value
-    let notesHtml = document.querySelectorAll('#class-notes input.student-notes')
-    let table = document.querySelector('#class-notes table#students-notes')
-    let notes = []
+/**export function insertStudent() {
 
-    notesHtml.forEach(note => {
-        notes.push(Number(note.value))
-    })
+}*/
+
+export function insertStudent(name, notes) {
+    let table = document.querySelector('#class-notes table#students-notes')
 
     table.appendChild(createStudentRow(name, notes))
 }
@@ -33,7 +30,7 @@ export function checkApproval(row) {
 export function createStudentRow(name, notes) {
     let row = document.createElement('tr')
     let tdName = document.createElement('td')
-    tdName.textContent = name
+    tdName.innerHTML = name
     row.appendChild(tdName)
 
     notes.forEach(note => {
