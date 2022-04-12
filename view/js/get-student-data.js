@@ -1,7 +1,7 @@
 import { insertStudent } from "./student-functions.js";
 
 export async function loadStudentsData() {
-    const res = await fetch("../server-api-rest/controler-get.php")
+    const res = await fetch("../server-api-rest/controller-get.php")
         .then((data) => data.json())
     
     if (res.message) {

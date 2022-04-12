@@ -1,5 +1,5 @@
 <?php
-    class student {
+    class Student {
         public string $name = 'ts ';
         public float $note1 = 0;
         public float $note2 = 0;
