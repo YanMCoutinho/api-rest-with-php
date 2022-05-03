@@ -13,10 +13,10 @@
             return $query;
         }
 
-        public function editStudent(int $idStudent, float $note1, float $note2,float $note3) {
+        public function editStudent(int $idStudent, String $name, float $note1, float $note2, float $note3) {
             require "./connection.php";
 
-            $strSQL = "UPDATE tb_student SET student_name = ". $name .", student_note1 = ". $note1 .", student_note2 = ". $note2.", student_note3 = " . $note3 . " WHERE id_student = " . $idStudent;
+            $strSQL = "UPDATE tb_student SET student_name = '". $name ."', student_note1 = ". $note1 .", student_note2 = ". $note2.", student_note3 = " . $note3 . " WHERE id_student = " . $idStudent;
             $query = mysqli_query($connection, $strSQL);
             require "./disconnect.php";
 
