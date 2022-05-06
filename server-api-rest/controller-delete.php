@@ -1,6 +1,6 @@
 <?php
-    if ( isset($_GET['id']) ) {
-        $id = $_GET['id'];
+    if ( isset($_POST['id']) ) {
+        $id = $_POST['id'];
 
         if (is_numeric($id)) {
             require './controller.php';

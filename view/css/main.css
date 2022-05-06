@@ -7,10 +7,11 @@
     font-family: Poppins;
 }
 
-#class-notes {
+#class-notes,
+.flex-container {
     padding: 70px 0;
     min-height: 100vh;
-    width: 100vw;
+    min-width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,6 +58,11 @@ table tr td {
     min-width: 320px;
     max-width: 500px;
     margin-top: 50px;
+}
+
+.insert-student input.id {
+    margin-bottom: 10px;
+    width: 100%;
 }
 
 .insert-student input.name {

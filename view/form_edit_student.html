@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Alterar Aluno</title>
+</head>
+<body class="flex-container">
+    <h1>ALTERAR ALUNO</h1>
+    <form class="insert-student" method="post" action="../server-api-rest/controller-edit.php">
+        <input type="number" name="id" placeholder="ID" class="id" required>
+        <input type="text" name="name" placeholder="Nome" class="name" required>
+        <div class="notes">
+            <input name="note1" data-type="insertStudent" placeholder="Nota 1" type="number" class="student-notes" min="0" max="10" required>
+            <input name="note2" data-type="insertStudent" placeholder="Nota 2" type="number" class="student-notes" min="0" max="10" required>
+            <input name="note3" data-type="insertStudent" placeholder="Nota 3" type="number" class="student-notes" min="0" max="10" required>
+        </div>
+        <button id="button-insert-student" data-type="insertStudent" type="submit">Alterar Aluno</button>
+    </form>
+</body>
+</html>
