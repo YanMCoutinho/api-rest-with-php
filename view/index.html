@@ -16,15 +16,16 @@
                 <td>Nota 2</td>
                 <td>Nota 3</td>
                 <td>Média</td>
+                <td>status🤑</td>
             </tr>
         </table>
 
-        <form class="insert-student" method="post" action="../server-api-rest/controller-post.php">
+        <form class="insert-student" method="post" action="../server-api-rest/controller-put.php">
             <input type="text" name="name" placeholder="Nome" class="name" required>
             <div class="notes">
-                <input name="note1" data-type="insertStudent" placeholder="Nota 1" type="number" class="student-notes" min="0" max="10" required>
-                <input name="note2" data-type="insertStudent" placeholder="Nota 2" type="number" class="student-notes" min="0" max="10" required>
-                <input name="note3" data-type="insertStudent" placeholder="Nota 3" type="number" class="student-notes" min="0" max="10" required>
+                <input name="note1" data-type="insertStudent" placeholder="Nota 1" type="number" class="student-notes" min="0" max="10" step="0.01" required>
+                <input name="note2" data-type="insertStudent" placeholder="Nota 2" type="number" class="student-notes" min="0" max="10" step="0.01" required>
+                <input name="note3" data-type="insertStudent" placeholder="Nota 3" type="number" class="student-notes" min="0" max="10" step="0.01" required>
             </div>
             <button id="button-insert-student" data-type="insertStudent" type="submit">Inserir Aluno</button>
         </form>

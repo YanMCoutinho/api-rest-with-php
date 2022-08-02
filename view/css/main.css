@@ -25,6 +25,9 @@
 .approved {
     color: rgb(0, 173, 0);
 }
+.super-approved {
+    color: #eead2d;
+}
 
  
 table {
@@ -51,6 +54,15 @@ table tr td {
     border-collapse: collapse;
     border: 1px solid black;
     margin: none;
+    min-width: 100px;
+}
+
+table tr td:last-child {
+    font-size: 200%;
+}
+
+table tr:first-child td {
+    font-size: initial;
 }
 
 .insert-student {

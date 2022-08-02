@@ -1,6 +1,6 @@
 <?php
     class Student {
-        public string $name = 'ts ';
+        public string $name = '';
         public float $note1 = 0;
         public float $note2 = 0;
         public float $note3 = 0;

@@ -20,10 +20,24 @@ export function setAverage(row) {
 
 export function checkApproval(row) {
     let average = row.children[(row.children.length - 1)].textContent
-    if (average > 6) {
+    if (average > 9) {
+        row.classList.add('super-approved')
+    } else if (average > 6) {
         row.classList.add('approved')
     } else {
         row.classList.add('disapproved')
+    }
+}
+
+export function checkStats(row) {
+    let average = row.children[(row.children.length - 2)].textContent
+    let status = row.children[(row.children.length - 1)]
+    if (average > 9) {
+        status.innerHTML = '💛'
+    } else if (average > 6) {
+        status.innerHTML = '💚'
+    } else {
+        status.innerHTML = '💔'
     }
 }
 
@@ -44,6 +58,10 @@ export function createStudentRow(name, notes) {
     row.appendChild(tdAverage)
     setAverage(row)
     checkApproval(row)
+    
+    let tdStatus = document.createElement('td')
+    row.appendChild(tdStatus)
+    checkStats(row)
 
     return row;
 }
