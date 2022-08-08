@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "295718e2-6c34-42a2-8f3f-49b9eb27ea0b",
+		"name": "HTTPs Request - Students Notes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21569196"
+	},
+	"item": [
+		{
+			"name": "Get the fourty generated students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/0504-student-notes/server-api-rest/get-40-students.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"0504-student-notes",
+						"server-api-rest",
+						"get-40-students.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get the students in db",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/0504-student-notes/server-api-rest/controller-get.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"0504-student-notes",
+						"server-api-rest",
+						"controller-get.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "shaolin matador de porco",
+							"type": "text"
+						},
+						{
+							"key": "note1",
+							"value": "9.32",
+							"type": "text"
+						},
+						{
+							"key": "note2",
+							"value": "9.75",
+							"type": "text"
+						},
+						{
+							"key": "note3",
+							"value": "8.63",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/0504-student-notes/server-api-rest/controller-put.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"0504-student-notes",
+						"server-api-rest",
+						"controller-put.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "et mutante editado",
+							"type": "text"
+						},
+						{
+							"key": "note1",
+							"value": "9.21",
+							"type": "text"
+						},
+						{
+							"key": "note2",
+							"value": "8.09",
+							"type": "text"
+						},
+						{
+							"key": "note3",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/0504-student-notes/server-api-rest/controller-post.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"0504-student-notes",
+						"server-api-rest",
+						"controller-post.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "38",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/0504-student-notes/server-api-rest/controller-delete.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"0504-student-notes",
+						"server-api-rest",
+						"controller-delete.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

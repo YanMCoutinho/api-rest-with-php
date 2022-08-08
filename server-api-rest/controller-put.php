@@ -9,7 +9,7 @@
         $controller = new Controller();
         $query = $controller->includeStudent($name, $note1, $note2, $note3);
         
-        if ($query) {       
+        if ($query) {
             header('Location: ../view/index.html');
         } else {
             echo 'Ocorreu um erro, tente novamente mais tarde!';
