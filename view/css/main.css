@@ -7,11 +7,11 @@
     font-family: Poppins;
 }
 
-#class-notes,
-.flex-container {
+#class-notes {
     padding: 70px 0;
     min-height: 100vh;
-    min-width: 100vw;
+    width: 98vw;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +21,6 @@
 .disapproved {
     color: rgb(245, 23, 23);
 }
-
 .approved {
     color: rgb(0, 173, 0);
 }
@@ -33,10 +32,16 @@
 table {
     border-collapse: collapse;
     border: 1px solid black;
-    width: 50%;
+    width: 100%;
     min-width: 320px;
     max-width: 500px;
     font-weight: 500;
+    margin: 4rem auto;
+}
+
+table caption {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
 }
 
 table tr:first-child {
@@ -48,6 +53,10 @@ table tr {
     margin: none;
 }
 
+table#students-statistics {
+    min-width: 40rem;
+}
+
 table tr td {
     padding: 10px;
     text-align: center;
@@ -57,11 +66,11 @@ table tr td {
     min-width: 100px;
 }
 
-table tr td:last-child {
+table#students-notes tr td:last-child {
     font-size: 200%;
 }
 
-table tr:first-child td {
+table#students-notes tr:first-child td {
     font-size: initial;
 }
 
@@ -69,7 +78,6 @@ table tr:first-child td {
     width: 50%;
     min-width: 320px;
     max-width: 500px;
-    margin-top: 50px;
 }
 
 .insert-student input.id {

@@ -1,4 +1,4 @@
-import { addEventOnClickInButton } from './element-function.js'
+//import { addEventOnClickInButton } from './element-function.js'
 import { loadStudentsData } from './get-student-data.js'
 
 window.addEventListener('DOMContentLoaded', (event) => {
