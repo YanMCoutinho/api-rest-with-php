@@ -19,13 +19,13 @@
 }
 
 .disapproved {
-    color: rgb(245, 23, 23);
+    color: #f51717;
 }
 .approved {
-    color: rgb(0, 173, 0);
+    color: #eead2d;
 }
 .super-approved {
-    color: #eead2d;
+    color: #00ad00;
 }
 
  
@@ -66,12 +66,23 @@ table tr td {
     min-width: 100px;
 }
 
-table#students-notes tr td:last-child {
+table#students-notes tr td:nth-child(6) {
     font-size: 200%;
 }
 
 table#students-notes tr:first-child td {
     font-size: initial;
+}
+
+table#students-notes button {
+    width: 100%;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    background-color: #3e00c404;
+}
+
+table#students-notes button:hover {
+    background-color: #3e00c49d;
 }
 
 .insert-student {
@@ -101,15 +112,10 @@ table#students-notes tr:first-child td {
     width: 32%;
 }
 
-.insert-student button {
-    height: 38px;
-    width: 100%;
-    min-width: 320px;
-    max-width: 500px;
+button {
     border-radius: 4px;
     border: none;
     color: white;
-    margin-top: 15px;
     font-weight: 600;
     font-size: 16px;
     letter-spacing: 0.5px;
@@ -118,7 +124,15 @@ table#students-notes tr:first-child td {
     background-color: #3E00C4;
 }
 
-.insert-student button:hover {
+button:hover {
     background-color: #3600AB;
     cursor: pointer;
+}
+
+.insert-student button {
+    margin-top: 15px;
+    height: 38px;
+    width: 100%;
+    min-width: 320px;
+    max-width: 500px;
 }

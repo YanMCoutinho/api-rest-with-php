@@ -1,9 +1,11 @@
+import { addEventOnClickInButton } from "./element-function.js"
+
 export function insertStudent(name, average, notes, stats) {
     let table = document.querySelector('#class-notes table#students-notes')
     table.appendChild(createStudentRow(name, average.toFixed(2), notes, stats))
 }
 
-export function checkApproval(row) {
+function checkApproval(row) {
     let average = row.children[(row.children.length - 1)].textContent
     if (average > 9) {
         row.classList.add('super-approved')
@@ -14,8 +16,13 @@ export function checkApproval(row) {
     }
 }
 
-export function createStudentRow(name, average, notes, stats) {
+function createStudentRow(name, average, notes, stats) {
     let row = document.createElement('tr')
+    row.dataset.name = name
+    row.dataset.notes = notes
+    row.dataset.average = average
+    row.dataset.stats = stats
+
     let tdName = document.createElement('td')
     tdName.innerHTML = name
     row.appendChild(tdName)
@@ -36,12 +43,20 @@ export function createStudentRow(name, average, notes, stats) {
     row.appendChild(tdStats)
     //checkStats(row)
 
+    let tdButton = document.createElement('td')
+    let button = document.createElement('button')
+    button.dataset.type = 'studentDetails'
+    button.innerHTML = '🧐'
+    addEventOnClickInButton(button)
+    tdButton.appendChild(button)
+    row.append(tdButton)    
+
     return row;
 }
 
 
 export function checkStats(stats) {
-    let statsList = ['💛', '💚', '💔']
+    let statsList = ['💚', '💛', '💔']
     
     if (statsList[stats]) {
         return statsList[stats]
