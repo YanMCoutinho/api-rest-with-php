@@ -3,7 +3,7 @@ import { loadStudentsData } from './get-student-data.js'
 
 window.addEventListener('DOMContentLoaded', (event) => {
     event.preventDefault()
-
+    
     let functions = {
         getNotes:_ => loadStudentsData(),
         getStudentData:_ => insertStudentDetails(),

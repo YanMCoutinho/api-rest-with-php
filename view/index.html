@@ -21,10 +21,42 @@
             </tr>
         </table>
 
+        <table id="students-notes-statistics">
+            <caption>DADOS DAS NOTAS</caption>
+            <tr>
+                <td>Medida</td>
+                <td>Nota 1</td>
+                <td>Nota 2</td>
+                <td>Nota 3</td>
+                <td>Total</td>
+                
+            </tr>
+        </table>
+
+        <form action="" method="get" class="list-form">
+            <h4>Filtrar Tabela de Notas</h4>
+            <div class="flex">
+                <label>Ordernar por </label>
+                <select name="orderby" class="orderby">
+                    <option value="">___</option>
+                    <option value="name">Nome</option>
+                    <option value="note1">Nota 1</option>
+                    <option value="note2">Nota 2</option>
+                    <option value="note3">Nota 3</option>
+                    <option value="average">Média</option>
+                    <option value="stats">Status</option>
+                </select>
+                <label> de forma </label>
+                <select name="ordertype" class="ordertype">
+                    <option value="asc">Ascendente</option>
+                    <option value="desc">Descendente</option>
+                </select>
+            </div>
+            <button type="submit">Filtrar</button>
+        </form>
         <table id="students-notes">
             <caption>NOTAS</caption>
             <tr>
-                
                 <td>Aluno</td>
                 <td>Nota 1</td>
                 <td>Nota 2</td>

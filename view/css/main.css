@@ -28,7 +28,28 @@
     color: #00ad00;
 }
 
- 
+form.list-form {
+    width: 60%;
+    max-width: 400px;
+    min-width: 310px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+form.list-form h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+form.list-form button {
+    margin-top: 1rem;
+    padding: 0.3rem;
+    width: 100%;
+}
+
 table {
     border-collapse: collapse;
     border: 1px solid black;

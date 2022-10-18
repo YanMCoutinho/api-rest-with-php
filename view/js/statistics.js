@@ -1,28 +1,36 @@
 export function insertStatistics(measure, superapproved, approved, disapproved, total) {
     let table = document.querySelector('#class-notes table#students-statistics')
-    table.appendChild(createStatisticRow(measure, superapproved, approved, disapproved, total))
+    let row = createStatisticRow(measure, superapproved, approved, disapproved, total)
+    
+    row.children[1].classList.add('super-approved')
+    row.children[2].classList.add('approved')
+    row.children[3].classList.add('disapproved')
+    table.appendChild(row)
 }
 
-function createStatisticRow(measure, superapproved, approved, disapproved, total) {
+export function insertNotesStatistics(measure, note1, note2, note3, total) {
+    let table = document.querySelector('#class-notes table#students-notes-statistics')
+    let row = createStatisticRow(measure, note1, note2, note3, total)
+    table.appendChild(row)
+}
+
+function createStatisticRow(measure, data1, data2, data3, total) {
     let row = document.createElement('tr')
     let tdMeasure = document.createElement('td')
     tdMeasure.textContent = measure
     row.appendChild(tdMeasure)
 
-    let tdSuperapproved = document.createElement('td')
-    tdSuperapproved.textContent = superapproved
-    tdSuperapproved.classList.add('super-approved')
-    row.appendChild(tdSuperapproved)
+    let tdData1 = document.createElement('td')
+    tdData1.textContent = data1
+    row.appendChild(tdData1)
     
-    let tdApproved = document.createElement('td')
-    tdApproved.textContent = approved
-    tdApproved.classList.add('approved')
-    row.appendChild(tdApproved)
+    let tdData2 = document.createElement('td')
+    tdData2.textContent = data2
+    row.appendChild(tdData2)
 
-    let tdDisapproved = document.createElement('td')
-    tdDisapproved.textContent = disapproved
-    tdDisapproved.classList.add('disapproved')
-    row.appendChild(tdDisapproved)
+    let tdData3 = document.createElement('td')
+    tdData3.textContent = data3
+    row.appendChild(tdData3)
 
     let tdTotal = document.createElement('td')
     tdTotal.textContent = total
